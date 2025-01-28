@@ -38,4 +38,8 @@ Once the server is running, you can access the application in your web browser a
 Thank you again for visiting my project. If you have any suggestions or encounter any issues, please don't hesitate to let me know. Happy coding! 🚀 """
 
 ## Projec demo
+<<<<<<< HEAD
 ![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
+=======
+![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
+>>>>>>> f9d95aeb5e83a3940320bd144d4acefb5e1ca50d
