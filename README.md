@@ -25,7 +25,12 @@ Follow these steps to set up and run the project on your local machine:
    pip install -r .\requirements.txt
 
 
-5. **Run the server** Start the development server with the following command:
+5. **Jump into product folder**
+
+   ```bash
+   cd .\production\
+
+6. **Run the server** Start the development server with the following command:
 
    ```bash
    python .\manage.py runserver
