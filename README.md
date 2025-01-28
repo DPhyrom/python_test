@@ -30,7 +30,7 @@ Follow these steps to set up and run the project on your local machine:
    ```bash
    python .\manage.py runserver
 
-## Getting Started
+## Demo
 Once the server is running, you can access the application in your web browser at http://127.0.0.1:8000/.
 
 ![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
