@@ -40,7 +40,7 @@ Once the server is running, you can access the application in your web browser a
 
 ![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
 
-- Once you click on /product, it will take you to the next page, which lists all products and allows you to create and filter them.
+- Once you click on /product, it will take you to the next page, which lists all products and allows you to create and filter them by name and id.
 
 ![image alt](https://github.com/DPhyrom/python_test/blob/feb452df2c6cf314ebe8af4ba104e7cfa20e7d4e/Screenshot%202025-01-28%20104555.png)
 
