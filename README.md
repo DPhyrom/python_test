@@ -1,5 +1,3 @@
-readme_content = """# Welcome to My Django REST Framework Project
-
 Hello and welcome! Thank you for taking the time to review my project. I truly appreciate your interest and would love to hear your feedback. 😊
 
 ## Getting Started
