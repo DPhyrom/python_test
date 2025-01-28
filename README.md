@@ -19,27 +19,44 @@ Follow these steps to set up and run the project on your local machine:
 3. **Activate the virtual environment** If you are using Windows:
 
    ```bash
-   .\\myenv\\Scripts\\activate
+   .\myenv\Scripts\activate
 
 4. **Install required dependencies** Use pip to install all the modules listed in requirements.txt:
 
    ```bash
-   pip install -r .\\requirements.txt
+   pip install -r .\requirements.txt
 
 
 5. **Run the server** Start the development server with the following command:
 
    ```bash
-   python .\\manage.py runserver
+   python .\manage.py runserver
 
 ## Getting Started
 Once the server is running, you can access the application in your web browser at http://127.0.0.1:8000/.
 
-Thank you again for visiting my project. If you have any suggestions or encounter any issues, please don't hesitate to let me know. Happy coding! 🚀 """
+![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
 
-## Projec demo
-<<<<<<< HEAD
-![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
-=======
-![image alt](https://github.com/DPhyrom/python_test/blob/bf6e43b7be96d3dbc34fef9da9c72d3e59737cde/Screenshot%202025-01-28%20102941.png)
->>>>>>> f9d95aeb5e83a3940320bd144d4acefb5e1ca50d
+- Once you click on /product, it will take you to the next page, which lists all products and allows you to create and filter them.
+
+![image alt](https://github.com/DPhyrom/python_test/blob/feb452df2c6cf314ebe8af4ba104e7cfa20e7d4e/Screenshot%202025-01-28%20104555.png)
+
+- Once you click on /product/1, it will take you to the next page, which displays the product by its ID, and you can also update or delete it.
+- About /category and /category/1 they work the same way as /product.
+
+![image alt](https://github.com/DPhyrom/python_test/blob/25de69d4ebf15799fc7335f2172da1bfdfb0f0ee/Screenshot%202025-01-28%20104815.png)
+
+## image search engine
+Image search engine: such an interesting concept.
+- Use Postman or Insomnia to test.
+- In Insomnia, click on Multipart and select Form Data.
+
+![image alt](https://github.com/DPhyrom/python_test/blob/a6275b822221d6a49188e6634788eb1941c647cc/Screenshot%202025-01-28%20114619.png)
+
+- Then, input the variable name (image).
+- Select the dropdown icon to choose a file.
+- Finally, click to select the image."
+- Products will be listed and sorted by similarity score, returning the top 10 most similar products.
+
+![image alt](https://github.com/DPhyrom/python_test/blob/588b5e67f2b89b6fb8a20173f9ba4cf7bb9838f7/Screenshot%202025-01-28%20115519.png)
+
