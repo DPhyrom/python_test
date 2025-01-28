@@ -8,6 +8,75 @@ from django.views import View
 from django.http import HttpResponse
 
 
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.parsers import MultiPartParser
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+import tempfile
+from .models import Product
+from .utils import extract_features  # Import the utility function
+from .utils import extract_features, precompute_features, calculate_similarity
+
+class ImageSearchAPIView(APIView):
+    parser_classes = [MultiPartParser]
+
+    def post(self, request, *args, **kwargs):
+        # Get the uploaded image
+        uploaded_image = request.FILES.get('image')
+        if not uploaded_image:
+            return Response({"error": "No image uploaded"}, status=400)
+
+        # Save the uploaded image to a temporary file
+        with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+            for chunk in uploaded_image.chunks():
+                temp_file.write(chunk)
+            temp_file_path = temp_file.name
+
+        # Extract features from the uploaded image
+        input_features = extract_features(temp_file_path)  # Use the utility function
+        if input_features is None:
+            return Response({"error": "Invalid image"}, status=400)
+
+        # Precompute features for all products (or load from storage)
+        product_features = precompute_features()
+
+        # Calculate similarity
+        similarities = calculate_similarity(input_features, product_features)
+
+        # Sort products by similarity score
+        sorted_products = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+
+        # Get the top 10 most similar products
+        top_10_products = sorted_products[:10]
+
+        # Fetch product details from the database
+        results = []
+        for product_id, similarity_score in top_10_products:
+            product = Product.objects.get(id=product_id)
+            results.append({
+                "id": product.id,
+                "name": product.name,
+                "image": request.build_absolute_uri(product.image.url),
+                "price": str(product.price),
+                "similarity_score": similarity_score
+            })
+
+        return Response(results)
+
+
+
+
+
+
+
+
+
+
+
+
+
 #create and view product
 class ProductListCreateAPIView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
